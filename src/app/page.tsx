@@ -3,7 +3,7 @@ import Converter from 'src/components/Converter'
 
 export default function Home() {
   return (
-    <main className="flex h-full flex-col">
+    <main className="flex h-screen flex-col">
       <div className='shrink-0 flex justify-between items-center p-5'>
         <p>asd</p>
         <div className='flex items-center gap-3'>
@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </div>
       <div className='bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 h-0.5 rounded-full'></div>
-      <div className='grow'>
+      <div className='grow flex justify-center items-center'>
         <Converter />
       </div>
     </main>
