@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { decimalNumberRegEx } from "src/shared/regex";
+import { roundNumber } from "src/utils/roundNumber";
 
 const Converter = () => {
   const [nepaliAmount, setNepaliAmount] = useState<number | string>('');
@@ -12,7 +13,7 @@ const Converter = () => {
     if (e.target.value === '') {
       setBusdAmount('');
     } else {
-      setBusdAmount(Number(e.target.value) * 3);
+      setBusdAmount(roundNumber(Number(e.target.value) * 3));
     }
   }
 
@@ -21,14 +22,15 @@ const Converter = () => {
     if (e.target.value === '') {
       setNepaliAmount('');
     } else {
-      setNepaliAmount(Number(e.target.value) / 3);
+      setNepaliAmount(roundNumber(Number(e.target.value) / 3));
     }
   }
 
 
   return (
 
-    <form className="flex flex-col gap-9 items-center justify-center">
+    <form className="flex flex-col gap-9 text-xl items-center justify-center bg-gray-900 p-10 rounded-lg">
+      <h3 className="font-semibold">Crypto Converter</h3>
       <div className="flex">
         <button disabled id="dropdown-button-2" data-dropdown-toggle="dropdown-search-city" className="w-[80px] flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
           NRS
