@@ -1,8 +1,8 @@
 'use client'
 
 import { formatEther } from "@ethersproject/units";
-import { useRef, useState } from "react"
-import { ImSpinner9 } from 'react-icons/im'
+import { useRef, useState } from "react";
+import { ImSpinner9 } from 'react-icons/im';
 import { hooks, metaMask } from "src/connectors/metaMask";
 import { useBalances } from "src/hooks/useBalances";
 import { useClickOutside } from "src/hooks/useClickOutside";
@@ -38,7 +38,7 @@ const WalletPopup = () => {
 
   return (
     <div className="relative" ref={popupRef}>
-      <button onClick={handleTooglePopup} className="focus:outline-none relative inline-flex rounded-full items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 dark:text-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
+      <button onClick={handleTooglePopup} className="focus:outline-none relative inline-flex rounded-full items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-gray-400 to-blue-500 dark:text-white dark:focus:ring-blue-800">
         <span className="relative px-5 py-2 rounded-full transition-all ease-in duration-75 bg-white dark:bg-gray-900">
           Wallet Details
         </span>

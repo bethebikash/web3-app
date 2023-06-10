@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Converter from 'src/components/Converter'
 import WalletPopup from 'src/components/WalletPopup'
-import { Web3ProviderWrapper } from 'src/contexts/Web3Context'
+import { Web3ProviderWrapper } from 'src/providers/Web3ProviderWrapper'
 
 export default function Home() {
   return (
