@@ -38,13 +38,13 @@ const WalletPopup = () => {
 
   return (
     <div className="relative" ref={popupRef}>
-      <button onClick={handleTooglePopup} className="relative inline-flex rounded-full items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-        <span className="relative px-5 py-2 rounded-full transition-all ease-in duration-75 bg-white dark:bg-gray-900 group-hover:bg-opacity-0">
+      <button onClick={handleTooglePopup} className="focus:outline-none relative inline-flex rounded-full items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 dark:text-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
+        <span className="relative px-5 py-2 rounded-full transition-all ease-in duration-75 bg-white dark:bg-gray-900">
           Wallet Details
         </span>
       </button>
       {isPopupOpen && (
-        <div className="absolute w-[400px] right-0 p-5 rounded-md mt-2 bg-gray-900 text-white border border-gray-700" >
+        <div className="absolute w-[300px] md:w-[400px] right-0 p-5 rounded-md mt-2 bg-gray-900 text-white border border-gray-700" >
           <div className="flex justify-between items-center">
             <h5 className="text-lg font-semibold">Wallet Details</h5>
             {isActive &&
@@ -62,7 +62,7 @@ const WalletPopup = () => {
               </div>
               <div className="flex justify-between items-center border-t border-gray-800 py-4">
                 <span>Chain ID</span>
-                <span>97</span>
+                <span>{chainId}</span>
               </div>
               <div className="flex justify-between items-center border-t border-gray-800 py-4">
                 <span>Balance</span>
